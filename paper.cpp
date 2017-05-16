@@ -11,11 +11,8 @@
 
 #include "Paper.hpp"
 
-Paper::Paper() {
-}
+Paper::Paper() { setStrength(1); setType('p');}
 
-Paper::~Paper(){}
+Paper::Paper(int input) { setStrength(input); setType('p');}
 
-void Paper::setStrength(int input) { }
-
-void Paper::fight(Tool t){}
+// void Paper::fight(Tool t){}

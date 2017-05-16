@@ -15,3 +15,31 @@
 Tool::Tool() {}
 
 Tool::~Tool(){}
+
+void Tool::setType(char input) {
+	type = input;
+}
+
+void Tool::setStrength(int input) {
+	strength = input;
+}
+
+char Tool::getType() {
+	return type;
+}
+
+int Tool::getStrength() {
+	return strength;
+}
+
+std::string Tool::printType() {
+	if (getType() == 'r') {
+		return "Rock";
+	}
+	if (getType() == 'p') {
+		return "Paper";
+	}
+	if (getType() == 's') {
+		return "Scissors";
+	}
+}

@@ -1,9 +1,10 @@
 #=============================================================================
-# Filename:  makefile 
-# Author:  David McClung
-# Date:  5/3/17
-# Purpose:  makefile for Project 3 
-# Reference:  www.youtube.com/watch?v=_r7i5X0rXJk (a Paul Programming video)
+# Filename:  	makefile
+# Author:  		David McClung
+#				Neil Johnson
+# Date:  		5/3/17
+# Purpose:  	makefile for Project 3
+# Reference:  	www.youtube.com/watch?v=_r7i5X0rXJk (a Paul Programming video)
 #=============================================================================
 output: play_game.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o menu.o
 	g++ play_game.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o menu.o -o play_game

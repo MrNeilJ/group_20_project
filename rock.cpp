@@ -12,10 +12,10 @@
 
 #include "Rock.hpp"
 
-Rock::Rock(){ SetStrength(1); type = r; }
+Rock::Rock(){ setStrength(1); setType('r'); }
 
-Rock::Rock(int input){ SetStrength(input); type = 'r';}
+Rock::Rock(int input){ setStrength(input); setType('r');}
 
-Rock::SetStrength(int input) { }a
+
 
 

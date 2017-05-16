@@ -18,9 +18,9 @@ class Scissors : public Tool{
 public:
     Scissors();
     Scissors(int);
-    ~Scissors();
+    /*~Scissors();
     void SetStrength(int);
-    void fight(Tool&);
+    void fight(Tool&); */
 };
 
 #endif /* SCISSORS_HPP */

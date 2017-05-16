@@ -17,9 +17,10 @@
 class Paper : public Tool{
 public:
     Paper();
-    ~Paper();
-    void setStrength(int);
-    void fight(Tool&);
+	Paper(int input);
+    //~Paper();
+    //void setStrength(int);
+    //void fight(Tool&);
 };
 
 #endif /* PAPER_HPP */

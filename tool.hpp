@@ -12,6 +12,8 @@
 #ifndef TOOL_HPP
 #define TOOL_HPP
 
+#include <iostream>
+
 class Tool {
 private:
     int strength;
@@ -20,7 +22,16 @@ private:
 public:
     Tool();
     virtual ~Tool();
-    virtual void SetStrength(int)=0;
+
+	// Setters
+	void setType(char);
+	void setStrength(int);
+
+	// Getters
+	char getType();
+	int getStrength();
+
+	std::string printType();
 };
 
 #endif /* TOOL_HPP */

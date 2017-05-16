@@ -18,11 +18,11 @@ class Rock: public Tool {
 public:
     Rock();
     Rock(int);
-    ~Rock();
-    
-    void SetStrength(int);
+    //~Rock();
+
+   /* void SetStrength(int);
     void SetType(char);
-    void fight(Tool&); //### voided just go get it to compile
+    void fight(Tool&); //### voided just go get it to compile */
 };
 
 #endif /* ROCK_HPP */

@@ -13,6 +13,9 @@
 #define RPSGAME_HPP
 
 #include "Tool.hpp"
+#include "rock.hpp"
+#include "paper.hpp"
+#include "scissors.hpp"
 
 class RPSGame {
 private:
@@ -21,11 +24,31 @@ private:
     int humanWins,
         computerWins,
         ties;
+
+	Rock rock;
+	Paper paper;
+	Scissors scissors;
+
 public:
+	RPSGame();
+	~RPSGame();
     int game();
+    Tool& humanGuess();
     Tool& computerGuess();
-    void displayResults(int, int, int);
+    void displayResults(int);
     bool playAgain();
+
+	// Getters
+
+
+	// Setters
+	void setHumanGuess(char);
+	void setComputerGuess();
+	void setStrengths();
+
+	void toolsReset();
+
+	// Compare the values
 };
 
 #endif /* RPSGAME_HPP */

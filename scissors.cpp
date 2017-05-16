@@ -11,10 +11,9 @@
 
 #include "Scissors.hpp"
 
-Scissors::Scissors() { strength = 1; type = 's'; }
+Scissors::Scissors() { setStrength(1); setType('s');}
 
-Scissors::Scissors(int input) { strength = input; type = 's'; }
+Scissors::Scissors(int input) { setStrength(input); setType('s');}
 
-Scissors::~Scissors(){}
+//Scissors::~Scissors(){}
 
-void Scissors::SetStrength(int input) {  }
