@@ -1,5 +1,15 @@
+//=============================================================================
+// Filename:  Paper.hpp
+// Authors:  Lucas Jensen
+//           Neil Johnson
+//           David McClung
+//           John Neubauer
+//           Adam Sugarman
+// Date:  5/15/17
+// Purpose:  "Rock, Paper, Scissors" Paper Class implementation file
+//============================================================================
 
-#include "paper.hpp"
+#include "Paper.hpp"
 
 Paper::Paper() {
 }

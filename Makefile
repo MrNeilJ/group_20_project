@@ -1,29 +1,36 @@
-output: main.o paper.o rock.o RPSGame.o scissors.o tool.o menuMaker.o inputCheck.o
-	g++ main.o paper.o rock.o RPSGame.o scissors.o tool.o menuMaker.o inputCheck.o -std=c++11 -o output
+#=============================================================================
+# Filename:  makefile 
+# Author:  David McClung
+# Date:  5/3/17
+# Purpose:  makefile for Project 3 
+# Reference:  www.youtube.com/watch?v=_r7i5X0rXJk (a Paul Programming video)
+#=============================================================================
+output: play_game.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o menu.o
+	g++ play_game.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o menu.o -o play_game
 
-main.o: main.cpp
-	g++ -std=c++11 -c main.cpp
+play_game.o: play_game.cpp
+	g++ -std=c++0x -c play_game.cpp
 
-paper.o: paper.cpp paper.hpp
-	g++ -std=c++11 -c paper.cpp
+RPSGame.o: RPSGame.hpp RPSGame.cpp
+	g++ -std=c++0x -c RPSGame.cpp
 
-rock.o: rock.cpp rock.hpp
-	g++ -std=c++11 -c rock.cpp
+Tool.o:	Tool.hpp Tool.cpp
+	g++ -std=c++0x -c Tool.cpp
 
-RPSGame.o: RPSGame.cpp RPSGame.hpp
-	g++ -std=c++11 -c RPSGame.cpp
+Rock.o: Rock.hpp Rock.cpp
+	g++ -std=c++0x -c Rock.cpp
 
-scissors.o: scissors.cpp scissors.hpp
-	g++ -std=c++11 -c scissors.cpp
+Paper.o: Paper.hpp Paper.cpp
+	g++ -std=c++0x -c Paper.cpp
 
-tool.o: tool.cpp tool.hpp
-	g++ -std=c++11 -c tool.cpp
+Scissors.o: Scissors.hpp Scissors.cpp
+	g++ -std=c++0x -c Scissors.cpp
 
-menuMaker.o: menuMaker.cpp menuMaker.hpp
-	g++ -std=c++11 -c menuMaker.cpp
-
-inputCheck.o: inputCheck.cpp inputCheck.hpp
-	g++ -std=c++11 -c inputCheck.cpp
+menu.o: menu.hpp menu.cpp
+	g++ -std=c++0x -c menu.cpp
 
 clean:
-	rm *.o output
+	rm *.o 
+	rm play_game
+
+
