@@ -7,9 +7,9 @@
 # Reference:  	www.youtube.com/watch?v=_r7i5X0rXJk (a Paul Programming video)
 #=============================================================================
 output: main.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o inputCheck.o
-	g++ main.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o inputCheck.o  -o
+	g++ main.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o inputCheck.o -o output
 
-main.o: main.hpp main.cpp
+main.o: main.cpp
 	g++ -std=c++0x -c main.cpp
 
 RPSGame.o: RPSGame.hpp RPSGame.cpp
