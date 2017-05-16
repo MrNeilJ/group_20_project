@@ -12,13 +12,22 @@
 #include "RPSGame.hpp"
 #include "inputCheck.hpp"
 
-
+/**************************************************************
+ *                  RPSGame::RPSGame()
+ *  This is the constructor function for the RPS class.  It sets
+ *  the win values to 0.
+ **************************************************************/
 RPSGame::RPSGame() {
 	humanWins 		= 0;
 	computerWins 	= 0;
 	ties 			= 0;
 }
 
+/**************************************************************
+ *                  RPSGame::~RPSGame()
+ *  This is the destructor function for the RPS class. It frees
+ *  up any dynamically allocated memory.
+ **************************************************************/
 RPSGame::~RPSGame() {
 	delete human;
 	delete computer;
@@ -26,6 +35,14 @@ RPSGame::~RPSGame() {
 	computer = nullptr;
 }
 
+/**************************************************************
+ *                  RPSGame::game()
+ *  This member funtion is what decides the verdict for each
+ *  round in the game.  It checks to see what the user played
+ *  versus what the computer played.  It then pulls the strength
+ *  values stored within each of the tool types and decides
+ *  which player is the winner of that round.
+ **************************************************************/
 int RPSGame::game(){
 	Tool player = *human;
 	Tool comp = *computer;
@@ -86,6 +103,11 @@ Tool& RPSGame::computerGuess(){
 }
 */
 
+/**************************************************************
+ *                  RPSGame::displayResults()
+ *  This displays the results of every round.  Telling us what
+ *  each player chose, as well as the current score.
+ **************************************************************/
 void RPSGame::displayResults(int turn) {
 	// Print out the results after each round
 	std::cout << "ROUND " << turn << " RESULTS" << std::endl;
@@ -111,6 +133,11 @@ bool playAgain(){
 }
 */
 
+/**************************************************************
+ *                  RPSGame::setHumanGuess()
+ *  This points the human pointer to an already created Tool
+ *  variable.
+ **************************************************************/
 void RPSGame::setHumanGuess(char userInput) {
 
 		if (userInput == 'r') {
@@ -127,6 +154,11 @@ void RPSGame::setHumanGuess(char userInput) {
 		}
 }
 
+/**************************************************************
+ *                  RPSGame::setComputerGuess()
+ *  This points the computer pointer to an already created Tool
+ *  variable.
+ **************************************************************/
 void RPSGame::setComputerGuess() {
 	int guess = rand() % 3;
 	// Set Computer tool to Rock
@@ -143,6 +175,12 @@ void RPSGame::setComputerGuess() {
 	}
 }
 
+/**************************************************************
+ *                  RPSGame::setStrengths()
+ *  This is what is utilized to modify the strength values to
+ *  whatever the user would like them to be, this can greatly
+ *  change results.
+ **************************************************************/
 void RPSGame::setStrengths() {
 	int strength;
 	std::cout << "Please set the strength values between 1 and 10" << std::endl;

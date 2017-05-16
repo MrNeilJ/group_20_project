@@ -4,6 +4,7 @@
 #include <time.h>
 
 int main() {
+	// Seeds rand so it can always be random
 	srand(time(NULL));
 	// Create the RPSGame Object
 	RPSGame game;
@@ -48,6 +49,7 @@ int main() {
 		guess = getCharacter();
 		// Check to see if the user chose to quit the game
 		if (guess == 'e') {
+			std::cout << "Thanks for playing, have a great day!" << std::endl;
 			return 0;
 		}
 		// If they selected one of the three values, then set the humans value to
@@ -60,17 +62,16 @@ int main() {
 			std::cout << "Response did not register, try again" << std::endl;
 		}
 
-		// Play a single round of the game
-		game.game();
+		if (guess == 'r' || guess == 'p' || guess == 's') {
+			// Play a single round of the game
+			game.game();
 
-		// Then display the results of the match
+			// Then display the results of the match
 
-		game.displayResults(turn);
-		turn++;
+			game.displayResults(turn);
+			turn++;
+		}
 
 	} while (guess != 'e');
 
-
-
-	return 0;
 }
