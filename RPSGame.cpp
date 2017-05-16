@@ -10,17 +10,20 @@
 //============================================================================
 
 #include "RPSGame.hpp"
-#include "rock.hpp"
-#include "paper.hpp"
-#include "scissors.hpp"
 #include "inputCheck.hpp"
-#include <iostream>
 
 
 RPSGame::RPSGame() {
 	humanWins 		= 0;
 	computerWins 	= 0;
 	ties 			= 0;
+}
+
+RPSGame::~RPSGame() {
+	delete human;
+	delete computer;
+	human = nullptr;
+	computer = nullptr;
 }
 
 int RPSGame::game(){
@@ -74,15 +77,14 @@ int RPSGame::game(){
 		ties++;
 	}
 }
-
+// Didn't utilize these, felt silly cause I couldn't figure out a way to correctly use them.
+/*
 Tool &RPSGame::humanGuess() {
-
 }
-
 
 Tool& RPSGame::computerGuess(){
-
 }
+*/
 
 void RPSGame::displayResults(int turn) {
 	// Print out the results after each round
@@ -97,19 +99,17 @@ void RPSGame::displayResults(int turn) {
 	std::cout << std::endl;
 }
 
+
+// Ended up not using these either, implemented a do-while loop to complete this, but could
+// easily be implemented.
+/*
 bool RPSGame::playAgain() {
 	return false;
 }
 
-
-
-void displayResults(int, int, int){
-    
-}
-
 bool playAgain(){
-    
 }
+*/
 
 void RPSGame::setHumanGuess(char userInput) {
 
@@ -158,20 +158,6 @@ void RPSGame::setStrengths() {
 	std::cout << "Scissors Strength: ";
 	strength = getInt();
 	scissors.setStrength(strength);
-}
-
-void RPSGame::toolsReset() {
-	rock.setStrength(1);
-	paper.setStrength(1);
-	scissors.setStrength(1);
-}
-
-
-RPSGame::~RPSGame() {
-	delete human;
-	delete computer;
-	human = nullptr;
-	computer = nullptr;
 }
 
 

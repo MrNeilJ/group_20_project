@@ -33,10 +33,10 @@ public:
 	RPSGame();
 	~RPSGame();
     int game();
-    Tool& humanGuess();
-    Tool& computerGuess();
+    // Tool& humanGuess();
+    // Tool& computerGuess();
     void displayResults(int);
-    bool playAgain();
+    // bool playAgain();
 
 	// Getters
 
@@ -45,8 +45,6 @@ public:
 	void setHumanGuess(char);
 	void setComputerGuess();
 	void setStrengths();
-
-	void toolsReset();
 
 	// Compare the values
 };
