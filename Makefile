@@ -6,11 +6,11 @@
 # Purpose:  	makefile for Project 3
 # Reference:  	www.youtube.com/watch?v=_r7i5X0rXJk (a Paul Programming video)
 #=============================================================================
-output: play_game.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o menu.o
-	g++ play_game.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o menu.o -o play_game
+output: main.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o inputCheck.o
+	g++ main.o RPSGame.o Tool.o Rock.o Paper.o Scissors.o inputCheck.o  -o
 
-play_game.o: play_game.cpp
-	g++ -std=c++0x -c play_game.cpp
+main.o: main.hpp main.cpp
+	g++ -std=c++0x -c main.cpp
 
 RPSGame.o: RPSGame.hpp RPSGame.cpp
 	g++ -std=c++0x -c RPSGame.cpp
@@ -27,8 +27,8 @@ Paper.o: Paper.hpp Paper.cpp
 Scissors.o: Scissors.hpp Scissors.cpp
 	g++ -std=c++0x -c Scissors.cpp
 
-menu.o: menu.hpp menu.cpp
-	g++ -std=c++0x -c menu.cpp
+inputCheck.o: inputCheck.hpp inputCheck.cpp
+	g++ -std=c++0x -c inputCheck.cpp
 
 clean:
 	rm *.o 

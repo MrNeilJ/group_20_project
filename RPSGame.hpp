@@ -13,9 +13,9 @@
 #define RPSGAME_HPP
 
 #include "Tool.hpp"
-#include "rock.hpp"
-#include "paper.hpp"
-#include "scissors.hpp"
+#include "Rock.hpp"
+#include "Paper.hpp"
+#include "Scissors.hpp"
 
 class RPSGame {
 private:

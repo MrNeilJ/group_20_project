@@ -18,7 +18,7 @@ class Tool {
 private:
     int strength;
     char type;
-    enum ToolType {r, p, s};
+    //enum ToolType {r, p, s};
 public:
     Tool();
     virtual ~Tool();
